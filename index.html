@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aframe modelos 3D</title>
+    <!-- Cargar Aframe -->
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <!-- Cargar Ambientes predefinidos -->
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene webxr="optionalFeatures:  hit-test;" ar-hit-test="target:#mew;">
+      <a-entity camera look-controls position="0 1.8 0"></a-entity>
+      <!-- OVNI -->
+      <a-entity
+        id="ovni"
+        gltf-model="url(./models/retro_ufo/scene.gltf)"
+        position="0 3 -3"
+        scale="1 1 1"
+        rotation="15 0 0"
+      ></a-entity>
+      <!-- Vaca -->
+      <a-entity
+        id="vaca"
+        gltf-model="url(./models/vaca/scene.gltf)"
+        position="0 .394 -3"
+        scale=".2 .2 .2"
+        rotation="0 45 0"
+        texture="src: ./models/cow/texture.png"
+      ></a-entity>
+
+      <a-entity environment="preset: forest; dressingAmount: 590"></a-entity>
+    </a-scene>
+  </body>
+</html>
